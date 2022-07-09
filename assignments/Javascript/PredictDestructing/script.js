@@ -14,7 +14,7 @@ const employee = {
 }
 const { name: otherName } = employee;
 //Predict the output
-console.log(name);              //elon --> void error
+console.log(name);              //elon --> void error name is not defined
 console.log(otherName);         //error
 
 //problem 3
