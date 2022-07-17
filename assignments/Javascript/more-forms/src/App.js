@@ -4,13 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Form 
-      firstName ={'John'}
-      lastName={'Smith'}
-      email ={'johnsmith@johnsmith.com'}
-      password ={'password'}
-      confirm={'password'}
-      />
+      <Form/>
       
     </div>
   );
