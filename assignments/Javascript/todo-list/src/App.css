@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+.line-through {
+  text-decoration: line-through; 
+}
+
+.italic {
+  font-size: italic;
+}
