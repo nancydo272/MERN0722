@@ -10,7 +10,7 @@ const Form = () => {
     
     const submitHandler = (e)=>{
         e.preventDefault()
-        axios.post('http://localhost:8000/', {
+        axios.post('http://localhost:8000/api/products/create', {
             title,
             price, 
             description
@@ -28,15 +28,15 @@ const Form = () => {
             <form onSubmit={submitHandler}>
                 <div>
                     <label>Title:</label>
-                    <input type="text"/>
+                    <input type="text" onChange ={(e)=> setTitle(e.target.value)}/>
                 </div>
                 <div>
                     <label>Price:</label>
-                    <input type="number"/>
+                    <input type="number" onChange ={(e)=> setPrice(e.target.value)}/>
                 </div>
                 <div>
                     <label>Description:</label>
-                    <input type="text"/>
+                    <input type="text" onChange ={(e)=> setDescription(e.target.value)}/>
                 </div>
                 <button className="btn btn-info">Create Product</button>
             </form>
