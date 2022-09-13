@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 const cors = require('cors'); 
 require("./config/mongoose.config");
+require('dotenv').config(); 
+const cookieParser = require('cookie-parser'); 
 
+app.use(cookieParser()); 
 //need this line for POST requests to a server route, if not it will not work. 
 //also allows us to send nested data
 app.use(express.json(),express.urlencoded({extended:true})); 
@@ -17,6 +20,7 @@ app.use(
 ); 
 
 require('./routes/movie.routes')(app); 
+require('./routes/user.routes')(app); 
 
 //app.listen runs our server and it takes port and callback function
 app.listen(port, () => console.log(`Listening on port: ${port}`) );
