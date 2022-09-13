@@ -5,6 +5,8 @@ import MovieList from './components/MovieList';
 import NavBar from './components/NavBar';
 import OneMovie from './components/OneMovie'; 
 import EditForm from './components/EditForm'; 
+import Register from "./components/Register"; 
+import Login from "./components/Login"; 
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path ="/movielist" element ={<MovieList /> } />
           <Route path="/movie/:id" element ={<OneMovie />}/>
           <Route path ="/editmovie/:id" element={<EditForm />} />
+          <Route path ="/register" element={<Register />} />
+          <Route path ="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </div>
